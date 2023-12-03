@@ -1,0 +1,178 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+@font-face {
+  font-family: "overpass-regular";
+  src: url("./Overpass/static/Overpass-Regular.ttf");
+}
+
+@font-face {
+  font-family: "overpass-bold";
+  src: url("./Overpass/static/Overpass-Bold.ttf");
+}
+
+/* Component */
+
+/* Feedback Section */
+
+body {
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main .user-feedback {
+  background-color: var(--dark-blue);
+  height: 400px;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.user-feedback .logo {
+  width: fit-content;
+  background-color: var(--medium-grey);
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.user-feedback h1 {
+  color: var(--white);
+  font-family: "overpass-bold";
+  font-size: xx-large;
+  margin: 1rem 0;
+}
+
+.user-feedback p {
+  color: var(--light-grey);
+  font-family: "overpass-regular";
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.user-feedback .rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-feedback .rating {
+  background-color: var(--very-dark-blue);
+  font-family: "overpass-regular";
+  color: var(--white);
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+
+.user-feedback .rating:hover {
+  background-color: var(--orange);
+}
+
+.user-feedback .submit {
+  width: 100%;
+  background-color: var(--orange);
+  height: 45px;
+  margin: 1rem 0;
+  border-radius: 50px;
+  font-family: "overpass-bold";
+  color: var(--white);
+  border: none;
+  outline: none;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.user-feedback .submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* Thank you Section */
+
+main .thank-you {
+  background-color: var(--dark-blue);
+  height: 400px;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.thank-you img {
+  margin: 1rem 0;
+}
+
+.thank-you .user-rating {
+  color: var(--orange);
+  font-family: "overpass-regular";
+  background-color: var(--very-dark-blue);
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.thank-you h1 {
+  color: var(--white);
+  font-family: "overpass-bold";
+  margin: 1rem;
+}
+
+.thank-you p {
+  color: var(--light-grey);
+  font-family: "overpass-regular";
+  line-height: 1.5;
+}
+
+/* Toggle */
+
+/* to toggle for user input and thank you message */
+.hidden {
+  display: none;
+}
+
+/* Selected rating will have this highlight */
+.rating-container .active-rating {
+  background-color: var(--medium-grey);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
